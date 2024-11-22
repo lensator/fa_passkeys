@@ -6,9 +6,7 @@ fa_passkeys is a Python package designed to seamlessly integrate WebAuthn (passk
 
 Install the fa_passkeys package using pip:
 
-
-   pip install fa_passkeys
-
+```bash pip install fa_passkeys ```
 
 🚀 Quick Start
 
@@ -17,6 +15,7 @@ Integrate fa_passkeys into your FastAPI application with minimal setup.
 1. Initialize FastAPI Application
 # main.py
 
+```
 from fastapi import FastAPI
 import uvicorn
 from fa_passkeys import initialize_app
@@ -41,6 +40,8 @@ async def startup_event():
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+```
+
 2. Configure Environment Variables
 Create a .env file in your project root and define the necessary configuration:
 
