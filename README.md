@@ -45,6 +45,7 @@ if __name__ == "__main__":
 2. Configure Environment Variables
 Create a .env file in your project root and define the necessary configuration:
 
+```
 # Database settings
 DB_URI=mongodb://localhost:27017
 DB_NAME=fa_passkeys_db
@@ -69,10 +70,13 @@ ALGORITHM=HS256
 
 # Session settings
 SESSION_SECRET_KEY=your_session_secret_key
+```
 3. Run the Application
-Start your FastAPI application:
 
+Start your FastAPI application:
+```
 uvicorn main:app --reload
+```
 🧑‍💻 Admin Interface
 
 Access the admin interface to manage users and their credentials.
