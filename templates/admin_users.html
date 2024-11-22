@@ -1,0 +1,27 @@
+<!-- templates/admin_user_detail.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin - User Detail</title>
+</head>
+
+<body>
+    <h1>User Detail: {{ user.username }}</h1>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <!-- Display custom fields if any -->
+    {% for field_name, field_value in user.dict().items() %}
+    {% if field_name not in ['id', 'username', 'credentials'] %}
+    <p><strong>{{ field_name }}:</strong> {{ field_value }}</p>
+    {% endif %}
+    {% endfor %}
+    <h2>Credentials</h2>
+    <ul>
+        {% for cred in user.credentials %}
+        <li>Credential ID: {{ cred.credential_id.hex() }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
