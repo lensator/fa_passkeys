@@ -6,7 +6,10 @@ fa_passkeys is a Python package designed to seamlessly integrate WebAuthn (passk
 
 Install the fa_passkeys package using pip:
 
-pip install fa_passkeys
+
+   pip install fa_passkeys
+
+
 🚀 Quick Start
 
 Integrate fa_passkeys into your FastAPI application with minimal setup.
