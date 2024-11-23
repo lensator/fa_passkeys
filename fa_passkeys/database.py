@@ -2,8 +2,8 @@
 
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
-from .models import User
-from .config import settings
+from fa_passkeys.models import User
+from fa_passkeys.config import settings
 
 client = None
 

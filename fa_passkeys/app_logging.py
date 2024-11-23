@@ -1,7 +1,7 @@
 # logging.py
 
 import logging
-from .config import settings
+from fa_passkeys.config import settings
 
 logger = logging.getLogger("fa_passkeys")
 

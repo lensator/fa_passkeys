@@ -8,12 +8,12 @@ from fido2.webauthn import (
     UserVerificationRequirement,
 )
 from fido2 import cbor
-from .models import WebAuthnCredential, User
+from fa_passkeys.models import WebAuthnCredential, User
 from typing import List
-from .config import settings
+from fa_passkeys.config import settings
 from jose import jwt, JWTError
 from datetime import timedelta, datetime
-from .logging import logger
+from fa_passkeys.app_logging import logger
 
 router = APIRouter()
 

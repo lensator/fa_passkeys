@@ -3,9 +3,9 @@
 from fastapi import APIRouter, Request, Depends, Form, HTTPException, status
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
-from .models import User
-from .config import settings
-from .logging import logger
+from fa_passkeys.models import User
+from fa_passkeys.config import settings
+from fa_passkeys.app_logging import logger
 
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")

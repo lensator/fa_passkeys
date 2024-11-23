@@ -1,4 +1,26 @@
 # .gitignore
 
+# Virtual environments
 venv/
-.venv/
+fa_passkeys_env/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+
+# Distribution
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+
+# Other
+.DS_Store

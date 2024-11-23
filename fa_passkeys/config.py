@@ -1,7 +1,7 @@
-# config.py
+# fa_passkeys/config.py
 
-from pydantic import BaseSettings, Field, EmailStr
-from typing import Dict, Any, List, Optional
+from pydantic import BaseSettings, Field
+from typing import Dict, Any, List
 
 
 class Settings(BaseSettings):
@@ -19,7 +19,9 @@ class Settings(BaseSettings):
 
     # Logging settings
     logging_level: str = Field(default="INFO", env="LOGGING_LEVEL")
-    logging_handlers: List[str] = Field(default_factory=lambda: ["console", "file"])
+    logging_handlers: List[str] = Field(
+        default_factory=lambda: ["console", "file"], env="LOGGING_HANDLERS"
+    )
     logging_file_path: str = Field(default="fa_passkeys.log", env="LOGGING_FILE_PATH")
 
     # Admin credentials
