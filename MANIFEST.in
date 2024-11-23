@@ -4,4 +4,3 @@ include README.md
 include LICENSE
 recursive-include fa_passkeys/templates *.html
 recursive-include fa_passkeys/static *.css *.js
-recursive-include docs *

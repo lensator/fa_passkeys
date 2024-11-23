@@ -29,14 +29,13 @@ class Settings(BaseSettings):
     admin_password: str = Field(default="admin", env="ADMIN_PASSWORD")
 
     # Security settings
-    secret_key: str = Field(default="your_jwt_secret_key", env="SECRET_KEY")
+    secret_key: str = Field(..., env="SECRET_KEY")
     algorithm: str = Field(default="HS256", env="ALGORITHM")
 
     # Session settings
-    session_secret_key: str = Field(
-        default="your_session_secret_key", env="SESSION_SECRET_KEY"
-    )
-
+    session_secret_key: str = Field(..., env="SESSION_SECRET_KEY")
+    session_lifetime_seconds: int = Field(default=3600, env="SESSION_LIFETIME_SECONDS")
+    
     class Config:
         env_file = ".env"
 
